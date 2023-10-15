@@ -8,7 +8,7 @@ export default class NewsItemComponents extends Component {
       <div>
           <div className="card" style={{ width: "18rem" }}>
             <img
-              src={imageURL}
+              src={!imageURL?"https://imgs.search.brave.com/2ZDhncsGzuIxAkSputY9UiolCx9dbSnDyshy9YVl2Tc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzU3LzMzLzM1/LzM2MF9GXzE1NzMz/MzU2M190Vzl4c0ln/YnlPMHZwTk52SGVr/bFdDcDVjaGg4T0Q3/OC5qcGc":imageURL}
               className="card-img-top"
               alt="..."
             />

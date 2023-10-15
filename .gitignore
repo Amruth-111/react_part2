@@ -1,0 +1,26 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+# newsapp directory
+/newsapp/.pnp
+/newsapp/.pnp.js
+/newsapp/node_modules
+
+# testing
+/newsapp/coverage
+
+# production
+/newsapp/build
+
+# misc
+/newsapp/.DS_Store
+/newsapp/.env.local
+/newsapp/.env.development.local
+/newsapp/.env.test.local
+/newsapp/.env.production.local
+/newsapp/npm-debug.log*
+/newsapp/yarn-debug.log*
+/newsapp/yarn-error.log*
+
+
+source.json

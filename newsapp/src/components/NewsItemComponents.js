@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 
 export default class NewsItemComponents extends Component {
+  
   render() {
-    let { title, titleDescription } = this.props;
+    let { title, titleDescription ,imageURL} = this.props;
     return (
       <div>
           <div className="card" style={{ width: "18rem" }}>
             <img
-              src="https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/79E8/production/_131380213_gettyimages-1705234375.jpg"
+              src={imageURL}
               className="card-img-top"
               alt="..."
             />

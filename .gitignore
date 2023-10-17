@@ -13,6 +13,7 @@
 /newsapp/build
 
 # misc
+/newsapp/.env
 /newsapp/.DS_Store
 /newsapp/.env.local
 /newsapp/.env.development.local

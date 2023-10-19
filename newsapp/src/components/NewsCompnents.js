@@ -29,7 +29,7 @@ export default class NewsCompnents extends Component {
   async componentDidMount() {
     this.setState({ loading: true });
     let data = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.API_KEY}&page=1&pageSize=${this.props.pageSize}`
+      `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&${process.env.API_KEY}&page=1&pageSize=${this.props.pageSize}`
     );
 
     let parsedData = await data.json();
@@ -44,7 +44,7 @@ export default class NewsCompnents extends Component {
     console.log("prev click");
     this.setState({ loading: true });
     let data = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.API_KEY}&page=${
+      `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&${process.env.API_KEY}&page=${
         this.state.page - 1
       }&pageSize=${this.props.pageSize}`
     );
@@ -56,13 +56,13 @@ export default class NewsCompnents extends Component {
       page: this.state.page - 1,
     });
   };
-  // ${process.env.API_KEY}
+// ${process.env.API_KEY}
   nextBtnClick = async () => {
     this.setState({ loading: true });
     console.log("nextclick");
     if (!(this.state.page + 1 > Math.ceil(this.state.totalResults / 20))) {
       let data = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.API_KEY}&page=${
+        `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&${process.env.API_KEY}&page=${
           this.state.page + 1
         }&pageSize=${this.props.pageSize}`
       );
@@ -94,10 +94,14 @@ export default class NewsCompnents extends Component {
                         }
                         imageURL={ele.urlToImage}
                         newsURL={ele.url}
+                        author={ele.author}
+                        date={ele.publishedAt}
+                        source={ele.source.name}
                       />
                     </div>
                   );
                 })}
+
             </div>
           </div>
         </div>

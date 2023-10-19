@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
+import {Link} from "react-router-dom";
 
 export default class Navbar extends Component {
   // static propTypes = {
@@ -11,9 +12,9 @@ export default class Navbar extends Component {
       <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <Link className="navbar-brand" to="#">
               NewsMonkey
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -30,15 +31,15 @@ export default class Navbar extends Component {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item"><a className="nav-link " aria-current="page" href="/">Home</a></li>
-                <li className="nav-item"><a className="nav-link " aria-current="page" href="/">business</a></li>
-                <li className="nav-item"><a className="nav-link " aria-current="page" href="/">entertainment</a></li>
-                <li className="nav-item"><a className="nav-link " aria-current="page" href="/">general</a></li>
-                <li className="nav-item"><a className="nav-link " aria-current="page" href="/">health</a></li>
-                <li className="nav-item"><a className="nav-link " aria-current="page" href="/">science</a></li>
-                <li className="nav-item"><a className="nav-link " aria-current="page" href="/">sports</a></li>
-                <li className="nav-item"><a className="nav-link " aria-current="page" href="/">technology</a></li>
-                <li className="nav-item"><a className="nav-link" href="/about">About</a></li>
+                <li className="nav-item"><Link className="nav-link " aria-current="page" to="/general">Home</Link></li>
+                <li className="nav-item"><Link className="nav-link " aria-current="page" to="/business">business</Link></li>
+                <li className="nav-item"><Link className="nav-link " aria-current="page" to="/entertainment">entertainment</Link></li>
+                <li className="nav-item"><Link className="nav-link " aria-current="page" to="/general">general</Link></li>
+                <li className="nav-item"><Link className="nav-link " aria-current="page" to="/health">health</Link></li>
+                <li className="nav-item"><Link className="nav-link " aria-current="page" to="/science">science</Link></li>
+                <li className="nav-item"><Link className="nav-link " aria-current="page" to="/sports">sports</Link></li>
+                <li className="nav-item"><Link className="nav-link " aria-current="page" to="/technology">technology</Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/Linkbout">About</Link></li>
                 
                   
 
